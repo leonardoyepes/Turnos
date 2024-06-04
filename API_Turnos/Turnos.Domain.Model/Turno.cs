@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Turnos.Domain.Model;
+﻿namespace Turnos.Domain.Model;
 
 public partial class Turno
 {

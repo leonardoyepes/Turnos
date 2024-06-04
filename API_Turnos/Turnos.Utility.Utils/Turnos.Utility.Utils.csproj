@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Turnos.Aplication.DTO\Turnos.Aplication.DTO.csproj" />
+    <ProjectReference Include="..\Turnos.Domain.Model\Turnos.Domain.Model.csproj" />
+  </ItemGroup>
+
 </Project>

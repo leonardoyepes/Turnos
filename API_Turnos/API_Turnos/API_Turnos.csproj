@@ -10,4 +10,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Turnos.Aplication.DTO\Turnos.Aplication.DTO.csproj" />
+    <ProjectReference Include="..\Turnos.Domain.Business\Turnos.Domain.Business.csproj" />
+    <ProjectReference Include="..\Turnos.Infrastucture.IOC\Turnos.Infrastucture.IOC.csproj" />
+  </ItemGroup>
+
 </Project>
