@@ -13,9 +13,5 @@
         public DateTime HoraCierre { get; set; }
 
         public int Duracion { get; set; }
-
-        public virtual ComercioDTO IdComercioNavigation { get; set; } = null!;
-
-        public virtual ICollection<TurnoDTO> Turnos { get; set; } = new List<TurnoDTO>();
     }
 }

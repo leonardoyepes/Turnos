@@ -6,4 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Turnos.Aplication.DTO\Turnos.Aplication.DTO.csproj" />
+    <ProjectReference Include="..\Turnos.Domain.Model\Turnos.Domain.Model.csproj" />
+    <ProjectReference Include="..\Turnos.Infrastucture.Data\Turnos.Infrastucture.Data.csproj" />
+    <ProjectReference Include="..\Turnos.Utility.Utils\Turnos.Utility.Utils.csproj" />
+  </ItemGroup>
+
 </Project>

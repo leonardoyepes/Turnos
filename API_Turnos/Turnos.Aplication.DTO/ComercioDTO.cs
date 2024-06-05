@@ -8,6 +8,6 @@
 
         public long AforoMaximo { get; set; }
 
-        public virtual ICollection<ServicioDTO> Servicios { get; set; } = new List<ServicioDTO>();
+        //public virtual ICollection<ServicioDTO> Servicios { get; set; } = new List<ServicioDTO>();
     }
 }

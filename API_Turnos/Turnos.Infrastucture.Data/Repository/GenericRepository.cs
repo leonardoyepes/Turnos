@@ -29,7 +29,7 @@ namespace Turnos.Infrastucture.Data.Repository
 
         public async Task<bool> Editar(TModel model)
         {
-            _dbventaContext.Set<TModel>().Add(model);
+            _dbventaContext.Set<TModel>().Update(model);
             await _dbventaContext.SaveChangesAsync();
             return true;
         }
