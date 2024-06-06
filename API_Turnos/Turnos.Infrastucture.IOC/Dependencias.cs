@@ -24,6 +24,7 @@ namespace Turnos.Infrastucture.IOC
             service.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             service.AddScoped<IComercioRepository, ComercioRepository>();
             service.AddScoped<IServicioRepository, ServicioRepository>();
+            service.AddScoped<ITurnoRepository, TurnoRepository>();
             #endregion Repository
 
             #region Mapper
@@ -33,6 +34,7 @@ namespace Turnos.Infrastucture.IOC
             #region Services
             service.AddScoped<IComercioService, ComercioService>();
             service.AddScoped<IServicioService, ServicioService>();
+            service.AddScoped<ITurnosService, TurnosService>();
             #endregion Services
 
         }
