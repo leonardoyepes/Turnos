@@ -1,6 +1,6 @@
 ﻿namespace Turnos.Aplication.DTO
 {
-    public  class TurnoDTO
+    public class TurnoDTO
     {
         public long IdTurno { get; set; }
 
@@ -15,5 +15,12 @@
         public bool Estado { get; set; }
 
         public virtual ServicioDTO IdServicioNavigation { get; set; } = null!;
+    }
+
+    public class GenerarTurnosDTO
+    {
+        public int IdServicio { get; set; }
+        public string FechaInicio { get; set; }
+        public string FechaFin { get; set; }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using API_Turnos.Utilis;
 using Microsoft.AspNetCore.Mvc;
 using Turnos.Aplication.DTO;
-using Turnos.Domain.Business.Services;
 using Turnos.Domain.Business.Services.Contracts;
 
 namespace API_Turnos.Controllers
@@ -19,23 +18,23 @@ namespace API_Turnos.Controllers
 
         [HttpPost]
         [Route("GenerarTurnos")]
-        public async Task<IActionResult> Guardar([FromBody] ServicioDTO modelo)
+        public async Task<IActionResult> Guardar([FromBody] GenerarTurnosDTO modelo)
         {
-            Response<ServicioDTO> _response = new();
+            Response<bool> _response = new();
             try
-            {
-                ServicioDTO servicioCreado = await _servicioService.Crear(modelo);
+            {   
+                bool turnosGenerados = await _turnosService.GenerarTurnos(modelo);
 
-                if (servicioCreado.IdServicio != 0)
-                    _response = new Response<ServicioDTO>() { State = true, Mesagge = "ok", Vaule = servicioCreado };
+                if (turnosGenerados)
+                    _response = new Response<bool>() { State = true, Mesagge = "ok", Vaule = true };
                 else
-                    _response = new Response<ServicioDTO>() { State = false, Mesagge = "No se pudo crear el servicio" };
+                    _response = new Response<bool>() { State = false, Mesagge = "No se pudo crear el servicio" };
 
                 return StatusCode(StatusCodes.Status200OK, _response);
             }
             catch (Exception ex)
             {
-                _response = new Response<ServicioDTO>() { State = false, Mesagge = ex.Message };
+                _response = new Response<bool>() { State = false, Mesagge = ex.Message };
                 return StatusCode(StatusCodes.Status500InternalServerError, _response);
             }
         }

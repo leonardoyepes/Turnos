@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Turnos.Aplication.DTO;
 using Turnos.Domain.Model;
+using Turnos.Domain.Model.Custom;
 
 namespace Turnos.Utility.Utils
 {
@@ -18,6 +19,7 @@ namespace Turnos.Utility.Utils
 
             #region Turno
             CreateMap<Turno, TurnoDTO>().ReverseMap();
+            CreateMap<GenerarTurnos, GenerarTurnosDTO>().ReverseMap();
             #endregion Turno
         }
     }
